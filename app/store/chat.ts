@@ -293,7 +293,7 @@ export const useChatStore = createPersistStore(
       async onUserInput(content: string, attachImages?: string[]) {
         const session = get().currentSession();
         const modelConfig = session.mask.modelConfig;
-
+        console.log("[User]: ", content);
         const userContent = fillTemplateWith(content, modelConfig);
         console.log("[User Input] after template: ", userContent);
 
